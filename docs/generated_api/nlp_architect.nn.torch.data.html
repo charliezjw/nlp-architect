@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nlp_architect.nn.torch.data package &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>nlp_architect.nn.torch.data package &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="nlp_architect.nn.torch.layers package" href="nlp_architect.nn.torch.layers.html" />
@@ -78,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -144,6 +149,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -178,11 +184,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="nlp_architect_api_index.html"><code class="docutils literal notranslate"><span class="pre">nlp\_architect</span></code> package</a> &raquo;</li>
         
@@ -195,7 +203,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -215,6 +223,44 @@
 <div class="section" id="module-nlp_architect.nn.torch.data.dataset">
 <span id="nlp-architect-nn-torch-data-dataset-module"></span><h2>nlp_architect.nn.torch.data.dataset module<a class="headerlink" href="#module-nlp_architect.nn.torch.data.dataset" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
+<dt id="nlp_architect.nn.torch.data.dataset.CombinedTensorDataset">
+<em class="property">class </em><code class="descclassname">nlp_architect.nn.torch.data.dataset.</code><code class="descname">CombinedTensorDataset</code><span class="sig-paren">(</span><em>datasets: List[torch.utils.data.dataset.TensorDataset]</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/nn/torch/data/dataset.html#CombinedTensorDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.nn.torch.data.dataset.CombinedTensorDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataset.Dataset</span></code></p>
+<p>Dataset as a concatenation of tensor datasets with different number of
+tensors (labeled dataset/ unlabeled dataset). Labels of unlabeled dataset will
+be represented as a tensor of zeros.</p>
+<p>Each sample will be retrieved by indexing tensors along the first dimension.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>datasets</strong> (<em>List</em><em>[</em><em>TensorDataset</em><em>]</em>) – datasets to concat.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="nlp_architect.nn.torch.data.dataset.ConcatTensorDataset">
+<em class="property">class </em><code class="descclassname">nlp_architect.nn.torch.data.dataset.</code><code class="descname">ConcatTensorDataset</code><span class="sig-paren">(</span><em>dataset: torch.utils.data.dataset.TensorDataset, datasets: List[torch.utils.data.dataset.TensorDataset]</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/nn/torch/data/dataset.html#ConcatTensorDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.nn.torch.data.dataset.ConcatTensorDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataset.Dataset</span></code></p>
+<p>Dataset as a concatenation of multiple TensorDataset datasets with same number of tensors.</p>
+<p>Each sample will be retrieved by indexing tensors along the first dimension.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dataset</strong> (<em>TensorDataset</em>) – dataset to which rest datasets will be concatinated.</li>
+<li><strong>datasets</strong> (<em>List</em><em>[</em><em>TensorDataset</em><em>]</em>) – datasets to concat to the dataset.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
 <dt id="nlp_architect.nn.torch.data.dataset.ParallelDataset">
 <em class="property">class </em><code class="descclassname">nlp_architect.nn.torch.data.dataset.</code><code class="descname">ParallelDataset</code><span class="sig-paren">(</span><em>*datasets</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/nn/torch/data/dataset.html#ParallelDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.nn.torch.data.dataset.ParallelDataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataset.Dataset</span></code></p>
@@ -231,7 +277,6 @@
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -240,10 +285,16 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -251,7 +302,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

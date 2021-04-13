@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nlp_architect.models.absa.train.rules &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>nlp_architect.models.absa.train.rules &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../../_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
 </head>
@@ -76,6 +80,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -122,6 +127,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -156,11 +162,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../../../index.html">Module code</a> &raquo;</li>
         
@@ -308,7 +316,12 @@
 <span class="sd">        text (str): Sentence text.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">candidate</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="k">if</span> <span class="n">dep_rel</span><span class="o">.</span><span class="n">rel</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;conj_and&quot;</span><span class="p">,</span> <span class="s2">&quot;conj_but&quot;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">dep_rel</span><span class="o">.</span><span class="n">rel</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;conj&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">dep_rel</span><span class="o">.</span><span class="n">dep</span><span class="o">.</span><span class="n">norm_pos</span> <span class="ow">in</span> <span class="p">{</span>
+        <span class="n">POS</span><span class="o">.</span><span class="n">ADJ</span><span class="p">,</span>
+        <span class="n">POS</span><span class="o">.</span><span class="n">ADV</span><span class="p">,</span>
+        <span class="n">POS</span><span class="o">.</span><span class="n">NN</span><span class="p">,</span>
+        <span class="n">POS</span><span class="o">.</span><span class="n">VB</span><span class="p">,</span>
+    <span class="p">}:</span>
         <span class="n">aspect</span> <span class="o">=</span> <span class="n">expand_aspect</span><span class="p">(</span><span class="n">dep_rel</span><span class="o">.</span><span class="n">dep</span><span class="p">,</span> <span class="n">relation_list</span><span class="p">)</span>
         <span class="n">candidate</span> <span class="o">=</span> <span class="n">CandidateTerm</span><span class="p">(</span><span class="n">aspect</span><span class="p">,</span> <span class="n">dep_rel</span><span class="o">.</span><span class="n">gov</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">Polarity</span><span class="o">.</span><span class="n">UNK</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">candidate</span></div>
@@ -319,7 +332,7 @@
 
 
 <div class="viewcode-block" id="expand_aspect"><a class="viewcode-back" href="../../../../../generated_api/nlp_architect.models.absa.train.html#nlp_architect.models.absa.train.rules.expand_aspect">[docs]</a><span class="k">def</span> <span class="nf">expand_aspect</span><span class="p">(</span><span class="n">in_aspect_token</span><span class="p">,</span> <span class="n">relation_list</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Expand aspect by Looking for a noun word that it&#39;s gov is the aspect. if it has (noun)</span>
+    <span class="sd">&quot;&quot;&quot;Expand aspect by Looking for a noun word that its gov is the aspect. if it has (noun)</span>
 <span class="sd">    compound relation add it to aspect.&quot;&quot;&quot;</span>
     <span class="n">aspect</span> <span class="o">=</span> <span class="n">DepRelationTerm</span><span class="p">(</span>
         <span class="n">text</span><span class="o">=</span><span class="n">in_aspect_token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span>
@@ -350,7 +363,6 @@
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -359,10 +371,16 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -370,7 +388,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

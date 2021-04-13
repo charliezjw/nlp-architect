@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nlp_architect.models.transformers package &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>nlp_architect.models.transformers package &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="nlp_architect.nlp package" href="nlp_architect.nlp.html" />
@@ -78,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -159,6 +164,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -193,11 +199,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="nlp_architect_api_index.html"><code class="docutils literal notranslate"><span class="pre">nlp\_architect</span></code> package</a> &raquo;</li>
         
@@ -208,7 +216,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -362,6 +370,11 @@
 <code class="descname">to</code><span class="sig-paren">(</span><em>device='cpu'</em>, <em>n_gpus=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/transformers/base_model.html#TransformerBase.to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.transformers.base_model.TransformerBase.to" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="method">
+<dt id="nlp_architect.models.transformers.base_model.TransformerBase.update_best_model">
+<code class="descname">update_best_model</code><span class="sig-paren">(</span><em>dev_data_set</em>, <em>test_data_set</em>, <em>best_dev</em>, <em>best_dev_test</em>, <em>best_result_file</em>, <em>save_path=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/transformers/base_model.html#TransformerBase.update_best_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.transformers.base_model.TransformerBase.update_best_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="function">
@@ -390,7 +403,7 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">transformers.configuration_bert.BertConfig</span></code></p>
 <dl class="attribute">
 <dt id="nlp_architect.models.transformers.quantized_bert.QuantizedBertConfig.pretrained_config_archive_map">
-<code class="descname">pretrained_config_archive_map</code><em class="property"> = {'bert-base-uncased': 'https://nlp-architect-data.s3-us-west-2.amazonaws.com/models/transformers/bert-base-uncased.json', 'bert-large-uncased': 'https://nlp-architect-data.s3-us-west-2.amazonaws.com/models/transformers/bert-large-uncased.json'}</em><a class="headerlink" href="#nlp_architect.models.transformers.quantized_bert.QuantizedBertConfig.pretrained_config_archive_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">pretrained_config_archive_map</code><em class="property"> = {'bert-base-uncased': 'https://d2zs9tzlek599f.cloudfront.net/models/transformers/bert-base-uncased.json', 'bert-large-uncased': 'https://d2zs9tzlek599f.cloudfront.net/models/transformers/bert-large-uncased.json'}</em><a class="headerlink" href="#nlp_architect.models.transformers.quantized_bert.QuantizedBertConfig.pretrained_config_archive_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -658,14 +671,96 @@ the tokenizer, as in NER task the ‘X’ label).</p>
 <dl class="method">
 <dt id="nlp_architect.models.transformers.token_classification.BertTokenClassificationHead.forward">
 <code class="descname">forward</code><span class="sig-paren">(</span><em>input_ids</em>, <em>token_type_ids=None</em>, <em>attention_mask=None</em>, <em>labels=None</em>, <em>position_ids=None</em>, <em>head_mask=None</em>, <em>valid_ids=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/transformers/token_classification.html#BertTokenClassificationHead.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.transformers.token_classification.BertTokenClassificationHead.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
+<dd><p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">BertForTokenClassification</span></code> forward method, overrides the <code class="xref py py-func docutils literal notranslate"><span class="pre">__call__()</span></code> special method.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Although the recipe for forward pass needs to be defined within
 this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
 instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
+pre and post processing steps while the latter silently ignores them.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>input_ids</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.LongTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>) – <p>Indices of input sequence tokens in the vocabulary.</p>
+<p>Indices can be obtained using <code class="xref py py-class docutils literal notranslate"><span class="pre">transformers.BertTokenizer</span></code>.
+See <code class="xref py py-func docutils literal notranslate"><span class="pre">transformers.PreTrainedTokenizer.encode()</span></code> and
+<code class="xref py py-func docutils literal notranslate"><span class="pre">transformers.PreTrainedTokenizer.encode_plus()</span></code> for details.</p>
+<p><a class="reference external" href="../glossary.html#input-ids">What are input IDs?</a></p>
+</li>
+<li><strong>attention_mask</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – <p>Mask to avoid performing attention on padding token indices.
+Mask values selected in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>:
+<code class="docutils literal notranslate"><span class="pre">1</span></code> for tokens that are NOT MASKED, <code class="docutils literal notranslate"><span class="pre">0</span></code> for MASKED tokens.</p>
+<p><a class="reference external" href="../glossary.html#attention-mask">What are attention masks?</a></p>
+</li>
+<li><strong>token_type_ids</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.LongTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – <p>Segment token indices to indicate first and second portions of the inputs.
+Indices are selected in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>: <code class="docutils literal notranslate"><span class="pre">0</span></code> corresponds to a <cite>sentence A</cite> token, <code class="docutils literal notranslate"><span class="pre">1</span></code>
+corresponds to a <cite>sentence B</cite> token</p>
+<p><a class="reference external" href="../glossary.html#token-type-ids">What are token type IDs?</a></p>
+</li>
+<li><strong>position_ids</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.LongTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – <p>Indices of positions of each input sequence tokens in the position embeddings.
+Selected in the range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">config.max_position_embeddings</span> <span class="pre">-</span> <span class="pre">1]</span></code>.</p>
+<p><a class="reference external" href="../glossary.html#position-ids">What are position IDs?</a></p>
+</li>
+<li><strong>head_mask</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(num_heads,)</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">(num_layers,</span> <span class="pre">num_heads)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Mask to nullify selected heads of the self-attention modules.
+Mask values selected in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>:
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">1</span></code> indicates the head is <strong>not masked</strong>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">0</span></code> indicates the head is <strong>masked</strong>.</li>
+<li><strong>inputs_embeds</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length,</span> <span class="pre">hidden_size)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Optionally, instead of passing <code class="xref py py-obj docutils literal notranslate"><span class="pre">input_ids</span></code> you can choose to directly pass an embedded representation.
+This is useful if you want more control over how to convert <cite>input_ids</cite> indices into associated vectors
+than the model’s internal embedding lookup matrix.</li>
+<li><strong>encoder_hidden_states</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length,</span> <span class="pre">hidden_size)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Sequence of hidden-states at the output of the last layer of the encoder. Used in the cross-attention
+if the model is configured as a decoder.</li>
+<li><strong>encoder_attention_mask</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Mask to avoid performing attention on the padding token indices of the encoder input. This mask
+is used in the cross-attention if the model is configured as a decoder.
+Mask values selected in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>:
+<code class="docutils literal notranslate"><span class="pre">1</span></code> for tokens that are NOT MASKED, <code class="docutils literal notranslate"><span class="pre">0</span></code> for MASKED tokens.</li>
+<li><strong>labels</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.LongTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Labels for computing the token classification loss.
+Indices should be in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">...,</span> <span class="pre">config.num_labels</span> <span class="pre">-</span> <span class="pre">1]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>loss (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(1,)</span></code>, <cite>optional</cite>, returned when <code class="docutils literal notranslate"><span class="pre">labels</span></code> is provided) :</dt>
+<dd><p class="first last">Classification loss.</p>
+</dd>
+<dt>scores (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length,</span> <span class="pre">config.num_labels)</span></code>)</dt>
+<dd><p class="first last">Classification scores (before SoftMax).</p>
+</dd>
+<dt>hidden_states (<code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple(torch.FloatTensor)</span></code>, <cite>optional</cite>, returned when <code class="docutils literal notranslate"><span class="pre">config.output_hidden_states=True</span></code>):</dt>
+<dd><p class="first">Tuple of <code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> (one for the output of the embeddings + one for the output of each layer)
+of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length,</span> <span class="pre">hidden_size)</span></code>.</p>
+<p class="last">Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+</dd>
+<dt>attentions (<code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple(torch.FloatTensor)</span></code>, <cite>optional</cite>, returned when <code class="docutils literal notranslate"><span class="pre">config.output_attentions=True</span></code>):</dt>
+<dd><p class="first">Tuple of <code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> (one for each layer) of shape
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">num_heads,</span> <span class="pre">sequence_length,</span> <span class="pre">sequence_length)</span></code>.</p>
+<p class="last">Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
+heads.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple(torch.FloatTensor)</span></code> comprising various elements depending on the configuration (<code class="xref py py-class docutils literal notranslate"><span class="pre">BertConfig</span></code>) and inputs</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">BertTokenizer</span><span class="p">,</span> <span class="n">BertForTokenClassification</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;bert-base-uncased&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">BertForTokenClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;bert-base-uncased&#39;</span><span class="p">)</span>
+
+<span class="n">input_ids</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;Hello, my dog is cute&quot;</span><span class="p">,</span> <span class="n">add_special_tokens</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Batch size 1</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">input_ids</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Batch size 1</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">input_ids</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+
+<span class="n">loss</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
 </div>
 </dd></dl>
 
@@ -683,14 +778,96 @@ the tokenizer, as in NER task the ‘X’ label).</p>
 <dl class="method">
 <dt id="nlp_architect.models.transformers.token_classification.QuantizedBertForTokenClassificationHead.forward">
 <code class="descname">forward</code><span class="sig-paren">(</span><em>input_ids</em>, <em>token_type_ids=None</em>, <em>attention_mask=None</em>, <em>labels=None</em>, <em>position_ids=None</em>, <em>head_mask=None</em>, <em>valid_ids=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/transformers/token_classification.html#QuantizedBertForTokenClassificationHead.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.transformers.token_classification.QuantizedBertForTokenClassificationHead.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
+<dd><p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">BertForTokenClassification</span></code> forward method, overrides the <code class="xref py py-func docutils literal notranslate"><span class="pre">__call__()</span></code> special method.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Although the recipe for forward pass needs to be defined within
 this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
 instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
+pre and post processing steps while the latter silently ignores them.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>input_ids</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.LongTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>) – <p>Indices of input sequence tokens in the vocabulary.</p>
+<p>Indices can be obtained using <code class="xref py py-class docutils literal notranslate"><span class="pre">transformers.BertTokenizer</span></code>.
+See <code class="xref py py-func docutils literal notranslate"><span class="pre">transformers.PreTrainedTokenizer.encode()</span></code> and
+<code class="xref py py-func docutils literal notranslate"><span class="pre">transformers.PreTrainedTokenizer.encode_plus()</span></code> for details.</p>
+<p><a class="reference external" href="../glossary.html#input-ids">What are input IDs?</a></p>
+</li>
+<li><strong>attention_mask</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – <p>Mask to avoid performing attention on padding token indices.
+Mask values selected in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>:
+<code class="docutils literal notranslate"><span class="pre">1</span></code> for tokens that are NOT MASKED, <code class="docutils literal notranslate"><span class="pre">0</span></code> for MASKED tokens.</p>
+<p><a class="reference external" href="../glossary.html#attention-mask">What are attention masks?</a></p>
+</li>
+<li><strong>token_type_ids</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.LongTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – <p>Segment token indices to indicate first and second portions of the inputs.
+Indices are selected in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>: <code class="docutils literal notranslate"><span class="pre">0</span></code> corresponds to a <cite>sentence A</cite> token, <code class="docutils literal notranslate"><span class="pre">1</span></code>
+corresponds to a <cite>sentence B</cite> token</p>
+<p><a class="reference external" href="../glossary.html#token-type-ids">What are token type IDs?</a></p>
+</li>
+<li><strong>position_ids</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.LongTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – <p>Indices of positions of each input sequence tokens in the position embeddings.
+Selected in the range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">config.max_position_embeddings</span> <span class="pre">-</span> <span class="pre">1]</span></code>.</p>
+<p><a class="reference external" href="../glossary.html#position-ids">What are position IDs?</a></p>
+</li>
+<li><strong>head_mask</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(num_heads,)</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">(num_layers,</span> <span class="pre">num_heads)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Mask to nullify selected heads of the self-attention modules.
+Mask values selected in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>:
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">1</span></code> indicates the head is <strong>not masked</strong>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">0</span></code> indicates the head is <strong>masked</strong>.</li>
+<li><strong>inputs_embeds</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length,</span> <span class="pre">hidden_size)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Optionally, instead of passing <code class="xref py py-obj docutils literal notranslate"><span class="pre">input_ids</span></code> you can choose to directly pass an embedded representation.
+This is useful if you want more control over how to convert <cite>input_ids</cite> indices into associated vectors
+than the model’s internal embedding lookup matrix.</li>
+<li><strong>encoder_hidden_states</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length,</span> <span class="pre">hidden_size)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Sequence of hidden-states at the output of the last layer of the encoder. Used in the cross-attention
+if the model is configured as a decoder.</li>
+<li><strong>encoder_attention_mask</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Mask to avoid performing attention on the padding token indices of the encoder input. This mask
+is used in the cross-attention if the model is configured as a decoder.
+Mask values selected in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>:
+<code class="docutils literal notranslate"><span class="pre">1</span></code> for tokens that are NOT MASKED, <code class="docutils literal notranslate"><span class="pre">0</span></code> for MASKED tokens.</li>
+<li><strong>labels</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.LongTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length)</span></code>, <cite>optional</cite>, defaults to <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>) – Labels for computing the token classification loss.
+Indices should be in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">...,</span> <span class="pre">config.num_labels</span> <span class="pre">-</span> <span class="pre">1]</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>loss (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(1,)</span></code>, <cite>optional</cite>, returned when <code class="docutils literal notranslate"><span class="pre">labels</span></code> is provided) :</dt>
+<dd><p class="first last">Classification loss.</p>
+</dd>
+<dt>scores (<code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length,</span> <span class="pre">config.num_labels)</span></code>)</dt>
+<dd><p class="first last">Classification scores (before SoftMax).</p>
+</dd>
+<dt>hidden_states (<code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple(torch.FloatTensor)</span></code>, <cite>optional</cite>, returned when <code class="docutils literal notranslate"><span class="pre">config.output_hidden_states=True</span></code>):</dt>
+<dd><p class="first">Tuple of <code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> (one for the output of the embeddings + one for the output of each layer)
+of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">sequence_length,</span> <span class="pre">hidden_size)</span></code>.</p>
+<p class="last">Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+</dd>
+<dt>attentions (<code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple(torch.FloatTensor)</span></code>, <cite>optional</cite>, returned when <code class="docutils literal notranslate"><span class="pre">config.output_attentions=True</span></code>):</dt>
+<dd><p class="first">Tuple of <code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.FloatTensor</span></code> (one for each layer) of shape
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">(batch_size,</span> <span class="pre">num_heads,</span> <span class="pre">sequence_length,</span> <span class="pre">sequence_length)</span></code>.</p>
+<p class="last">Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
+heads.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple(torch.FloatTensor)</span></code> comprising various elements depending on the configuration (<code class="xref py py-class docutils literal notranslate"><span class="pre">BertConfig</span></code>) and inputs</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">BertTokenizer</span><span class="p">,</span> <span class="n">BertForTokenClassification</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;bert-base-uncased&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">BertForTokenClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;bert-base-uncased&#39;</span><span class="p">)</span>
+
+<span class="n">input_ids</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;Hello, my dog is cute&quot;</span><span class="p">,</span> <span class="n">add_special_tokens</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Batch size 1</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">input_ids</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Batch size 1</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">input_ids</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+
+<span class="n">loss</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
 </div>
 </dd></dl>
 
@@ -739,21 +916,13 @@ registered hooks while the latter silently ignores them.</p>
 
 <dl class="class">
 <dt id="nlp_architect.models.transformers.token_classification.TransformerTokenClassifier">
-<em class="property">class </em><code class="descclassname">nlp_architect.models.transformers.token_classification.</code><code class="descname">TransformerTokenClassifier</code><span class="sig-paren">(</span><em>model_type: str</em>, <em>labels: List[str] = None</em>, <em>*args</em>, <em>load_quantized=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/transformers/token_classification.html#TransformerTokenClassifier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.transformers.token_classification.TransformerTokenClassifier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.models.transformers.token_classification.</code><code class="descname">TransformerTokenClassifier</code><span class="sig-paren">(</span><em>model_type: str</em>, <em>labels: List[str] = None</em>, <em>training_args: bool = None</em>, <em>*args</em>, <em>load_quantized=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/transformers/token_classification.html#TransformerTokenClassifier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.transformers.token_classification.TransformerTokenClassifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nlp_architect.models.transformers.base_model.TransformerBase" title="nlp_architect.models.transformers.base_model.TransformerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">nlp_architect.models.transformers.base_model.TransformerBase</span></code></a></p>
-<p>Transformer word tagging classifier</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>model_type</strong> (<em>str</em>) – model family (classifier head), choose between bert/quant_bert/xlnet</li>
-<li><strong>labels</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – list of tag labels</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<p>Transformer word tagging classifier
+:param model_type: model family (classifier head), choose between bert/quant_bert/xlnet
+:type model_type: str
+:param labels: list of tag labels
+:type labels: List[str], optional</p>
 <dl class="attribute">
 <dt id="nlp_architect.models.transformers.token_classification.TransformerTokenClassifier.MODEL_CLASS">
 <code class="descname">MODEL_CLASS</code><em class="property"> = {'bert': &lt;class 'nlp_architect.models.transformers.token_classification.BertTokenClassificationHead'&gt;, 'quant_bert': &lt;class 'nlp_architect.models.transformers.token_classification.QuantizedBertForTokenClassificationHead'&gt;, 'roberta': &lt;class 'nlp_architect.models.transformers.token_classification.RobertaForTokenClassificationHead'&gt;, 'xlnet': &lt;class 'nlp_architect.models.transformers.token_classification.XLNetTokenClassificationHead'&gt;}</em><a class="headerlink" href="#nlp_architect.models.transformers.token_classification.TransformerTokenClassifier.MODEL_CLASS" title="Permalink to this definition">¶</a></dt>
@@ -830,7 +999,7 @@ registered hooks while the latter silently ignores them.</p>
 
 <dl class="method">
 <dt id="nlp_architect.models.transformers.token_classification.TransformerTokenClassifier.train">
-<code class="descname">train</code><span class="sig-paren">(</span><em>train_data_set: torch.utils.data.dataloader.DataLoader</em>, <em>dev_data_set: Union[torch.utils.data.dataloader.DataLoader</em>, <em>List[torch.utils.data.dataloader.DataLoader]] = None</em>, <em>test_data_set: Union[torch.utils.data.dataloader.DataLoader</em>, <em>List[torch.utils.data.dataloader.DataLoader]] = None</em>, <em>gradient_accumulation_steps: int = 1</em>, <em>per_gpu_train_batch_size: int = 8</em>, <em>max_steps: int = -1</em>, <em>num_train_epochs: int = 3</em>, <em>max_grad_norm: float = 1.0</em>, <em>logging_steps: int = 50</em>, <em>save_steps: int = 100</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/transformers/token_classification.html#TransformerTokenClassifier.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.transformers.token_classification.TransformerTokenClassifier.train" title="Permalink to this definition">¶</a></dt>
+<code class="descname">train</code><span class="sig-paren">(</span><em>train_data_set: torch.utils.data.dataloader.DataLoader</em>, <em>dev_data_set: Union[torch.utils.data.dataloader.DataLoader</em>, <em>List[torch.utils.data.dataloader.DataLoader]] = None</em>, <em>test_data_set: Union[torch.utils.data.dataloader.DataLoader</em>, <em>List[torch.utils.data.dataloader.DataLoader]] = None</em>, <em>gradient_accumulation_steps: int = 1</em>, <em>per_gpu_train_batch_size: int = 8</em>, <em>max_steps: int = -1</em>, <em>num_train_epochs: int = 3</em>, <em>max_grad_norm: float = 1.0</em>, <em>logging_steps: int = 50</em>, <em>save_steps: int = 100</em>, <em>best_result_file: str = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/transformers/token_classification.html#TransformerTokenClassifier.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.transformers.token_classification.TransformerTokenClassifier.train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run model training</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -851,6 +1020,7 @@ registered hooks while the latter silently ignores them.</p>
 <li><strong>max_grad_norm</strong> (<em>float</em><em>, </em><em>optional</em>) – max gradient norm. Defaults to 1.0.</li>
 <li><strong>logging_steps</strong> (<em>int</em><em>, </em><em>optional</em>) – number of steps between logging. Defaults to 50.</li>
 <li><strong>save_steps</strong> (<em>int</em><em>, </em><em>optional</em>) – number of steps between model save. Defaults to 100.</li>
+<li><strong>best_result_file</strong> (<em>str</em><em>, </em><em>optional</em>) – path to save best dev results when it’s updated.</li>
 </ul>
 </td>
 </tr>
@@ -896,7 +1066,6 @@ registered hooks while the latter silently ignores them.</p>
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -905,10 +1074,16 @@ registered hooks while the latter silently ignores them.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -916,7 +1091,6 @@ registered hooks while the latter silently ignores them.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

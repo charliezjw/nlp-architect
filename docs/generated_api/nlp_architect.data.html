@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nlp_architect.data package &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>nlp_architect.data package &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="nlp_architect.data.cdc_resources package" href="nlp_architect.data.cdc_resources.html" />
@@ -78,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -152,6 +157,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -186,11 +192,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="nlp_architect_api_index.html"><code class="docutils literal notranslate"><span class="pre">nlp\_architect</span></code> package</a> &raquo;</li>
         
@@ -199,7 +207,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -731,6 +739,11 @@ Returns a numpy array with embeddings in emb_sizexvocab_size shape</td>
 </table>
 </dd></dl>
 
+<dl class="function">
+<dt id="nlp_architect.data.glue_tasks.get_metric_fn">
+<code class="descclassname">nlp_architect.data.glue_tasks.</code><code class="descname">get_metric_fn</code><span class="sig-paren">(</span><em>task_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/glue_tasks.html#get_metric_fn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.glue_tasks.get_metric_fn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-nlp_architect.data.intent_datasets">
 <span id="nlp-architect-data-intent-datasets-module"></span><h2>nlp_architect.data.intent_datasets module<a class="headerlink" href="#module-nlp_architect.data.intent_datasets" title="Permalink to this headline">¶</a></h2>
@@ -963,7 +976,7 @@ by tabs &lt;token&gt;     &lt;tag_label&gt;     &lt;intent&gt;</p>
 <p>Data loader for penn tree bank dataset</p>
 <dl class="class">
 <dt id="nlp_architect.data.ptb.PTBDataLoader">
-<em class="property">class </em><code class="descclassname">nlp_architect.data.ptb.</code><code class="descname">PTBDataLoader</code><span class="sig-paren">(</span><em>word_dict</em>, <em>seq_len=100</em>, <em>data_dir='/Users/pizsak/data'</em>, <em>dataset='WikiText-103'</em>, <em>batch_size=32</em>, <em>skip=30</em>, <em>split_type='train'</em>, <em>loop=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/ptb.html#PTBDataLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.ptb.PTBDataLoader" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.data.ptb.</code><code class="descname">PTBDataLoader</code><span class="sig-paren">(</span><em>word_dict</em>, <em>seq_len=100</em>, <em>data_dir='/home/runner/data'</em>, <em>dataset='WikiText-103'</em>, <em>batch_size=32</em>, <em>skip=30</em>, <em>split_type='train'</em>, <em>loop=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/ptb.html#PTBDataLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.ptb.PTBDataLoader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class that defines data loader</p>
 <dl class="method">
@@ -1007,7 +1020,7 @@ by tabs &lt;token&gt;     &lt;tag_label&gt;     &lt;intent&gt;</p>
 
 <dl class="class">
 <dt id="nlp_architect.data.ptb.PTBDictionary">
-<em class="property">class </em><code class="descclassname">nlp_architect.data.ptb.</code><code class="descname">PTBDictionary</code><span class="sig-paren">(</span><em>data_dir='/Users/pizsak/data'</em>, <em>dataset='WikiText-103'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/ptb.html#PTBDictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.ptb.PTBDictionary" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.data.ptb.</code><code class="descname">PTBDictionary</code><span class="sig-paren">(</span><em>data_dir='/home/runner/data'</em>, <em>dataset='WikiText-103'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/ptb.html#PTBDictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.ptb.PTBDictionary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for generating a dictionary of all words in the PTB corpus</p>
 <dl class="method">
@@ -1186,14 +1199,14 @@ Loads train/test files with tabular separation.</p>
 
 <dl class="class">
 <dt id="nlp_architect.data.sequential_tagging.TokenClsInputExample">
-<em class="property">class </em><code class="descclassname">nlp_architect.data.sequential_tagging.</code><code class="descname">TokenClsInputExample</code><span class="sig-paren">(</span><em>guid: str, text: str, tokens: List[str], label: List[str] = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/sequential_tagging.html#TokenClsInputExample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.sequential_tagging.TokenClsInputExample" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.data.sequential_tagging.</code><code class="descname">TokenClsInputExample</code><span class="sig-paren">(</span><em>guid: str, text: str, tokens: List[str], shapes: List[int] = None, label: List[str] = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/sequential_tagging.html#TokenClsInputExample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.sequential_tagging.TokenClsInputExample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nlp_architect.data.utils.InputExample" title="nlp_architect.data.utils.InputExample"><code class="xref py py-class docutils literal notranslate"><span class="pre">nlp_architect.data.utils.InputExample</span></code></a></p>
 <p>A single training/test example for simple sequence token classification.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="nlp_architect.data.sequential_tagging.TokenClsProcessor">
-<em class="property">class </em><code class="descclassname">nlp_architect.data.sequential_tagging.</code><code class="descname">TokenClsProcessor</code><span class="sig-paren">(</span><em>data_dir</em>, <em>tag_col: int = -1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/sequential_tagging.html#TokenClsProcessor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.sequential_tagging.TokenClsProcessor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.data.sequential_tagging.</code><code class="descname">TokenClsProcessor</code><span class="sig-paren">(</span><em>data_dir</em>, <em>tag_col: int = -1</em>, <em>ignore_token=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/sequential_tagging.html#TokenClsProcessor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.sequential_tagging.TokenClsProcessor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nlp_architect.data.utils.DataProcessor" title="nlp_architect.data.utils.DataProcessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">nlp_architect.data.utils.DataProcessor</span></code></a></p>
 <p>Sequence token classification Processor dataset loader.
 Loads a directory with train.txt/test.txt/dev.txt files in tab separeted
@@ -1230,7 +1243,7 @@ Label dictionary is given in labels.txt file.</p>
 
 <dl class="method">
 <dt id="nlp_architect.data.sequential_tagging.TokenClsProcessor.get_vocabulary">
-<code class="descname">get_vocabulary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/sequential_tagging.html#TokenClsProcessor.get_vocabulary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.sequential_tagging.TokenClsProcessor.get_vocabulary" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_vocabulary</code><span class="sig-paren">(</span><em>examples: nlp_architect.data.sequential_tagging.TokenClsInputExample = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/sequential_tagging.html#TokenClsProcessor.get_vocabulary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.sequential_tagging.TokenClsProcessor.get_vocabulary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1312,11 +1325,44 @@ Label dictionary is given in labels.txt file.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="nlp_architect.data.utils.get_cached_filepath">
+<code class="descclassname">nlp_architect.data.utils.</code><code class="descname">get_cached_filepath</code><span class="sig-paren">(</span><em>data_dir</em>, <em>model_name</em>, <em>seq_length</em>, <em>task_name</em>, <em>set_type='train'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/utils.html#get_cached_filepath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.utils.get_cached_filepath" title="Permalink to this definition">¶</a></dt>
+<dd><p>get cached file name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>{str} -- data directory string</strong> (<em>data_dir</em>) – </li>
+<li><strong>{str} -- model name</strong> (<em>model_name</em>) – </li>
+<li><strong>{int} -- max sequence length</strong> (<em>seq_length</em>) – </li>
+<li><strong>{str} -- name of task</strong> (<em>task_name</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first"><strong>{str} -- set type</strong> (<em>set_type</em>) – {“train”})</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">str – cached filename</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="nlp_architect.data.utils.read_column_tagged_file">
-<code class="descclassname">nlp_architect.data.utils.</code><code class="descname">read_column_tagged_file</code><span class="sig-paren">(</span><em>filename: str</em>, <em>tag_col: int = -1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/utils.html#read_column_tagged_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.utils.read_column_tagged_file" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">nlp_architect.data.utils.</code><code class="descname">read_column_tagged_file</code><span class="sig-paren">(</span><em>filename: str</em>, <em>tag_col: int = -1</em>, <em>ignore_token: str = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/utils.html#read_column_tagged_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.utils.read_column_tagged_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads column tagged (CONLL) style file (tab separated and token per line)
 tag_col is the column number to use as tag of the token (defualts to the last in line)
-return format :
+:param filename: input file path
+:type filename: str
+:param tag_col: the column contains the labels
+:type tag_col: int
+:param ignore_token: a str token to exclude
+:type ignore_token: str</p>
+<p>return format :
 [ [‘token’, ‘TAG’], [‘token’, ‘TAG2’],… ]</p>
 </dd></dl>
 
@@ -1338,18 +1384,18 @@ return format :
 <code class="descclassname">nlp_architect.data.utils.</code><code class="descname">split_column_dataset</code><span class="sig-paren">(</span><em>first_count: int</em>, <em>second_count: int</em>, <em>out_folder</em>, <em>dataset</em>, <em>first_filename</em>, <em>second_filename</em>, <em>tag_col=-1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/utils.html#split_column_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.utils.split_column_dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Splits a single column tagged dataset into two files according to the amount of examples
 requested to be included in each file.
-split1_count (int) : the amount of examples to include in the first split file
-split2_count (int) : the amount of examples to include in the second split file
+first_count (int) : the amount of examples to include in the first split file
+second_count (int) : the amount of examples to include in the second split file
 out_folder (str) : the folder in which the result files will be stored
 dataset (str) : the path to the original data file
-split1_filename (str) : the name of the first split file
-split2_filename (str) : the name of the second split file
+first_filename (str) : the name of the first split file
+second_filename (str) : the name of the second split file
 tag_col (int) : the index of the tag column</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="nlp_architect.data.utils.write_column_tagged_file">
-<code class="descclassname">nlp_architect.data.utils.</code><code class="descname">write_column_tagged_file</code><span class="sig-paren">(</span><em>filename: str, data: List[Tuple]</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/utils.html#write_column_tagged_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.utils.write_column_tagged_file" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">nlp_architect.data.utils.</code><code class="descname">write_column_tagged_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/data/utils.html#write_column_tagged_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.data.utils.write_column_tagged_file" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -1363,7 +1409,6 @@ tag_col (int) : the index of the tag column</p>
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -1372,10 +1417,16 @@ tag_col (int) : the index of the tag column</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -1383,7 +1434,6 @@ tag_col (int) : the index of the tag column</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

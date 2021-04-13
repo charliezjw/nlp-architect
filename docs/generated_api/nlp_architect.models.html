@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nlp_architect.models package &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>nlp_architect.models package &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="nlp_architect.models.absa package" href="nlp_architect.models.absa.html" />
@@ -78,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -159,6 +164,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -193,11 +199,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="nlp_architect_api_index.html"><code class="docutils literal notranslate"><span class="pre">nlp\_architect</span></code> package</a> &raquo;</li>
         
@@ -206,7 +214,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -1545,7 +1553,7 @@ for idx, file_name in enumerate(files_models):</p>
 <span id="nlp-architect-models-tagging-module"></span><h2>nlp_architect.models.tagging module<a class="headerlink" href="#module-nlp_architect.models.tagging" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="nlp_architect.models.tagging.InputFeatures">
-<em class="property">class </em><code class="descclassname">nlp_architect.models.tagging.</code><code class="descname">InputFeatures</code><span class="sig-paren">(</span><em>input_ids</em>, <em>char_ids</em>, <em>mask=None</em>, <em>label_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/tagging.html#InputFeatures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.tagging.InputFeatures" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.models.tagging.</code><code class="descname">InputFeatures</code><span class="sig-paren">(</span><em>input_ids</em>, <em>char_ids</em>, <em>shape_ids</em>, <em>mask=None</em>, <em>label_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/tagging.html#InputFeatures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.tagging.InputFeatures" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A single set of features of data.</p>
 </dd></dl>
@@ -1751,15 +1759,18 @@ Supports pytorch embedder models, multi-gpu training, KD from teacher models</p>
 
 <dl class="method">
 <dt id="nlp_architect.models.tagging.NeuralTagger.train">
-<code class="descname">train</code><span class="sig-paren">(</span><em>train_data_set: torch.utils.data.dataloader.DataLoader</em>, <em>dev_data_set: torch.utils.data.dataloader.DataLoader = None</em>, <em>test_data_set: torch.utils.data.dataloader.DataLoader = None</em>, <em>epochs: int = 3</em>, <em>batch_size: int = 8</em>, <em>optimizer=None</em>, <em>max_grad_norm: float = 5.0</em>, <em>logging_steps: int = 50</em>, <em>save_steps: int = 100</em>, <em>save_path: str = None</em>, <em>distiller: nlp_architect.nn.torch.distillation.TeacherStudentDistill = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/tagging.html#NeuralTagger.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.tagging.NeuralTagger.train" title="Permalink to this definition">¶</a></dt>
+<code class="descname">train</code><span class="sig-paren">(</span><em>train_data_set: torch.utils.data.dataloader.DataLoader</em>, <em>dev_data_set: torch.utils.data.dataloader.DataLoader = None</em>, <em>test_data_set: torch.utils.data.dataloader.DataLoader = None</em>, <em>epochs: int = 3</em>, <em>batch_size: int = 8</em>, <em>optimizer=None</em>, <em>max_grad_norm: float = 5.0</em>, <em>logging_steps: int = 50</em>, <em>save_steps: int = 100</em>, <em>save_path: str = None</em>, <em>distiller: nlp_architect.nn.torch.distillation.TeacherStudentDistill = None</em>, <em>best_result_file: str = None</em>, <em>word_dropout: float = 0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/tagging.html#NeuralTagger.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.tagging.NeuralTagger.train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Train a tagging model</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>train_data_set</strong> (<em>DataLoader</em>) – train examples dataloader. If distiller object is</li>
-<li><strong>train examples should contain a tuple of student/teacher data examples.</strong> (<em>provided</em>) – </li>
+<li><strong>train_data_set</strong> (<em>DataLoader</em>) – <p>train examples dataloader.
+- If distiller object is provided train examples should contain a tuple of</p>
+<blockquote>
+<div>student/teacher data examples.</div></blockquote>
+</li>
 <li><strong>dev_data_set</strong> (<em>DataLoader</em><em>, </em><em>optional</em>) – dev examples dataloader. Defaults to None.</li>
 <li><strong>test_data_set</strong> (<em>DataLoader</em><em>, </em><em>optional</em>) – test examples dataloader. Defaults to None.</li>
 <li><strong>epochs</strong> (<em>int</em><em>, </em><em>optional</em>) – num of epochs to train. Defaults to 3.</li>
@@ -1771,6 +1782,8 @@ Supports pytorch embedder models, multi-gpu training, KD from teacher models</p>
 <li><strong>save_path</strong> (<em>str</em><em>, </em><em>optional</em>) – model output path. Defaults to None.</li>
 <li><strong>distiller</strong> (<a class="reference internal" href="../transformers_distillation.html#nlp_architect.nn.torch.distillation.TeacherStudentDistill" title="nlp_architect.nn.torch.distillation.TeacherStudentDistill"><em>TeacherStudentDistill</em></a><em>, </em><em>optional</em>) – KD model for training the model using</li>
 <li><strong>teacher model. Defaults to None.</strong> (<em>a</em>) – </li>
+<li><strong>best_result_file</strong> (<em>str</em><em>, </em><em>optional</em>) – path to save best dev results when it’s updated.</li>
+<li><strong>word_dropout</strong> (<em>float</em><em>, </em><em>optional</em>) – whole-word (-&gt; oov) dropout rate. Defaults to 0.</li>
 </ul>
 </td>
 </tr>
@@ -1779,35 +1792,9 @@ Supports pytorch embedder models, multi-gpu training, KD from teacher models</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="nlp_architect.models.tagging.NeuralTagger.train_pseudo">
-<code class="descname">train_pseudo</code><span class="sig-paren">(</span><em>labeled_data_set: torch.utils.data.dataloader.DataLoader</em>, <em>unlabeled_data_set: torch.utils.data.dataloader.DataLoader</em>, <em>distiller: nlp_architect.nn.torch.distillation.TeacherStudentDistill</em>, <em>dev_data_set: torch.utils.data.dataloader.DataLoader = None</em>, <em>test_data_set: torch.utils.data.dataloader.DataLoader = None</em>, <em>batch_size_l: int = 8</em>, <em>batch_size_ul: int = 8</em>, <em>epochs: int = 100</em>, <em>optimizer=None</em>, <em>max_grad_norm: float = 5.0</em>, <em>logging_steps: int = 50</em>, <em>save_steps: int = 100</em>, <em>save_path: str = None</em>, <em>save_best: bool = False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/tagging.html#NeuralTagger.train_pseudo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.tagging.NeuralTagger.train_pseudo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Train a tagging model</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>train_data_set</strong> (<em>DataLoader</em>) – train examples dataloader. If distiller object is</li>
-<li><strong>train examples should contain a tuple of student/teacher data examples.</strong> (<em>provided</em>) – </li>
-<li><strong>dev_data_set</strong> (<em>DataLoader</em><em>, </em><em>optional</em>) – dev examples dataloader. Defaults to None.</li>
-<li><strong>test_data_set</strong> (<em>DataLoader</em><em>, </em><em>optional</em>) – test examples dataloader. Defaults to None.</li>
-<li><strong>batch_size_l</strong> (<em>int</em><em>, </em><em>optional</em>) – batch size for the labeled dataset. Defaults to 8.</li>
-<li><strong>batch_size_ul</strong> (<em>int</em><em>, </em><em>optional</em>) – batch size for the unlabeled dataset. Defaults to 8.</li>
-<li><strong>epochs</strong> (<em>int</em><em>, </em><em>optional</em>) – num of epochs to train. Defaults to 100.</li>
-<li><strong>optimizer</strong> (<em>fn</em><em>, </em><em>optional</em>) – optimizer function. Defaults to default model optimizer.</li>
-<li><strong>max_grad_norm</strong> (<em>float</em><em>, </em><em>optional</em>) – max gradient norm. Defaults to 5.0.</li>
-<li><strong>logging_steps</strong> (<em>int</em><em>, </em><em>optional</em>) – number of steps between logging. Defaults to 50.</li>
-<li><strong>save_steps</strong> (<em>int</em><em>, </em><em>optional</em>) – number of steps between model saves. Defaults to 100.</li>
-<li><strong>save_path</strong> (<em>str</em><em>, </em><em>optional</em>) – model output path. Defaults to None.</li>
-<li><strong>save_best</strong> (<em>str</em><em>, </em><em>optional</em>) – wether to save model when result is best on dev set</li>
-<li><strong>distiller</strong> (<a class="reference internal" href="../transformers_distillation.html#nlp_architect.nn.torch.distillation.TeacherStudentDistill" title="nlp_architect.nn.torch.distillation.TeacherStudentDistill"><em>TeacherStudentDistill</em></a><em>, </em><em>optional</em>) – KD model for training the model using</li>
-<li><strong>teacher model. Defaults to None.</strong> (<em>a</em>) – </li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<dt id="nlp_architect.models.tagging.NeuralTagger.update_best_model">
+<code class="descname">update_best_model</code><span class="sig-paren">(</span><em>dev_data_set</em>, <em>test_data_set</em>, <em>best_dev</em>, <em>best_dev_test</em>, <em>best_result_file</em>, <em>loss</em>, <em>epoch</em>, <em>save_path=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/tagging.html#NeuralTagger.update_best_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.tagging.NeuralTagger.update_best_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -2034,7 +2021,6 @@ instead of an integer.</td>
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -2043,10 +2029,16 @@ instead of an integer.</td>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -2054,7 +2046,6 @@ instead of an integer.</td>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

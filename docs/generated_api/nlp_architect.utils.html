@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nlp_architect.utils package &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>nlp_architect.utils package &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="nlp_architect.utils.resources package" href="nlp_architect.utils.resources.html" />
@@ -78,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -153,6 +158,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -187,11 +193,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="nlp_architect_api_index.html"><code class="docutils literal notranslate"><span class="pre">nlp\_architect</span></code> package</a> &raquo;</li>
         
@@ -200,7 +208,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -322,7 +330,7 @@ model provided.</p>
 
 <dl class="function">
 <dt id="nlp_architect.utils.embedding.get_embedding_matrix">
-<code class="descclassname">nlp_architect.utils.embedding.</code><code class="descname">get_embedding_matrix</code><span class="sig-paren">(</span><em>embeddings: dict</em>, <em>vocab: nlp_architect.utils.text.Vocabulary</em>, <em>embedding_size: int = None</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="reference internal" href="../_modules/nlp_architect/utils/embedding.html#get_embedding_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.embedding.get_embedding_matrix" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">nlp_architect.utils.embedding.</code><code class="descname">get_embedding_matrix</code><span class="sig-paren">(</span><em>embeddings: dict</em>, <em>vocab: nlp_architect.utils.text.Vocabulary</em>, <em>embedding_size: int = None</em>, <em>lowercase_only: bool = False</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="reference internal" href="../_modules/nlp_architect/utils/embedding.html#get_embedding_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.embedding.get_embedding_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a matrix of word embeddings given a vocabulary</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -344,7 +352,7 @@ model provided.</p>
 
 <dl class="function">
 <dt id="nlp_architect.utils.embedding.load_embedding_file">
-<code class="descclassname">nlp_architect.utils.embedding.</code><code class="descname">load_embedding_file</code><span class="sig-paren">(</span><em>filename: str</em><span class="sig-paren">)</span> &#x2192; dict<a class="reference internal" href="../_modules/nlp_architect/utils/embedding.html#load_embedding_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.embedding.load_embedding_file" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">nlp_architect.utils.embedding.</code><code class="descname">load_embedding_file</code><span class="sig-paren">(</span><em>filename: str</em>, <em>dim: int = None</em><span class="sig-paren">)</span> &#x2192; dict<a class="reference internal" href="../_modules/nlp_architect/utils/embedding.html#load_embedding_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.embedding.load_embedding_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a word embedding file</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -793,9 +801,101 @@ for returning.</li>
 </dd></dl>
 
 <dl class="function">
+<dt id="nlp_architect.utils.metrics.classification_report">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">classification_report</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_pred</em>, <em>digits=2</em>, <em>suffix=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#classification_report"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.classification_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a text report showing the main classification metrics.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>y_true</strong> – 2d array. Ground truth (correct) target values.</li>
+<li><strong>y_pred</strong> – 2d array. Estimated targets as returned by a classifier.</li>
+<li><strong>digits</strong> – int. Number of digits for formatting output floating point values.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">string. Text summary of the precision, recall, F1 score for each class.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">report</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seqeval.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="go">             precision    recall  f1-score   support</span>
+<span class="go">&lt;BLANKLINE&gt;</span>
+<span class="go">       MISC       0.00      0.00      0.00         1</span>
+<span class="go">        PER       1.00      1.00      1.00         1</span>
+<span class="go">&lt;BLANKLINE&gt;</span>
+<span class="go">  micro avg       0.50      0.50      0.50         2</span>
+<span class="go">  macro avg       0.50      0.50      0.50         2</span>
+<span class="go">&lt;BLANKLINE&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="nlp_architect.utils.metrics.end_of_chunk">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">end_of_chunk</code><span class="sig-paren">(</span><em>prev_tag</em>, <em>tag</em>, <em>prev_type</em>, <em>type_</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#end_of_chunk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.end_of_chunk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a chunk ended between the previous and current word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>prev_tag</strong> – previous chunk tag.</li>
+<li><strong>tag</strong> – current chunk tag.</li>
+<li><strong>prev_type</strong> – previous type.</li>
+<li><strong>type</strong> – current type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">boolean.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">chunk_end</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="nlp_architect.utils.metrics.get_conll_scores">
 <code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">get_conll_scores</code><span class="sig-paren">(</span><em>predictions</em>, <em>y</em>, <em>y_lex</em>, <em>unk='O'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#get_conll_scores"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.get_conll_scores" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Conll style scores (precision, recall, f1)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nlp_architect.utils.metrics.get_entities">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">get_entities</code><span class="sig-paren">(</span><em>seq</em>, <em>suffix=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#get_entities"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.get_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets entities from sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>seq</strong> (<em>list</em>) – sequence of labels.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of (chunk_type, chunk_start, chunk_end).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seqeval.metrics.sequence_labeling</span> <span class="kn">import</span> <span class="n">get_entities</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seq</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-LOC&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_entities</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+<span class="go">[(&#39;PER&#39;, 0, 1), (&#39;LOC&#39;, 3, 3)]</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -805,9 +905,217 @@ for returning.</li>
 </dd></dl>
 
 <dl class="function">
+<dt id="nlp_architect.utils.metrics.sequence_accuracy_score">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">sequence_accuracy_score</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_pred</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#sequence_accuracy_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.sequence_accuracy_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accuracy classification score.</p>
+<p>In multilabel classification, this function computes subset accuracy:
+the set of labels predicted for a sample must <em>exactly</em> match the
+corresponding set of labels in y_true.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>y_true</strong> – 2d array. Ground truth (correct) target values.</li>
+<li><strong>y_pred</strong> – 2d array. Estimated targets as returned by a tagger.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">float.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">score</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seqeval.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="go">0.80</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="nlp_architect.utils.metrics.sequence_f1_score">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">sequence_f1_score</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_pred</em>, <em>suffix=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#sequence_f1_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.sequence_f1_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the F1 score.</p>
+<p>The F1 score can be interpreted as a weighted average of the precision and
+recall, where an F1 score reaches its best value at 1 and worst score at 0.
+The relative contribution of precision and recall to the F1 score are
+equal. The formula for the F1 score is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">F1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">precision</span> <span class="o">*</span> <span class="n">recall</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">precision</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>y_true</strong> – 2d array. Ground truth (correct) target values.</li>
+<li><strong>y_pred</strong> – 2d array. Estimated targets as returned by a tagger.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">float.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">score</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seqeval.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="go">0.50</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="nlp_architect.utils.metrics.sequence_performance_measure">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">sequence_performance_measure</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_pred</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#sequence_performance_measure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.sequence_performance_measure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the performance metrics: TP, FP, FN, TN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>y_true</strong> – 2d array. Ground truth (correct) target values.</li>
+<li><strong>y_pred</strong> – 2d array. Estimated targets as returned by a tagger.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">performance_dict</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seqeval.metrics</span> <span class="kn">import</span> <span class="n">performance_measure</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-ORG&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">performance_measure</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="go">(3, 3, 1, 4)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="nlp_architect.utils.metrics.sequence_precision_score">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">sequence_precision_score</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_pred</em>, <em>suffix=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#sequence_precision_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.sequence_precision_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the precision.</p>
+<p>The precision is the ratio <code class="docutils literal notranslate"><span class="pre">tp</span> <span class="pre">/</span> <span class="pre">(tp</span> <span class="pre">+</span> <span class="pre">fp)</span></code> where <code class="docutils literal notranslate"><span class="pre">tp</span></code> is the number of
+true positives and <code class="docutils literal notranslate"><span class="pre">fp</span></code> the number of false positives. The precision is
+intuitively the ability of the classifier not to label as positive a sample.</p>
+<p>The best value is 1 and the worst value is 0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>y_true</strong> – 2d array. Ground truth (correct) target values.</li>
+<li><strong>y_pred</strong> – 2d array. Estimated targets as returned by a tagger.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">float.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">score</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seqeval.metrics</span> <span class="kn">import</span> <span class="n">precision_score</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="go">0.50</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="nlp_architect.utils.metrics.sequence_recall_score">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">sequence_recall_score</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_pred</em>, <em>suffix=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#sequence_recall_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.sequence_recall_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the recall.</p>
+<p>The recall is the ratio <code class="docutils literal notranslate"><span class="pre">tp</span> <span class="pre">/</span> <span class="pre">(tp</span> <span class="pre">+</span> <span class="pre">fn)</span></code> where <code class="docutils literal notranslate"><span class="pre">tp</span></code> is the number of
+true positives and <code class="docutils literal notranslate"><span class="pre">fn</span></code> the number of false negatives. The recall is
+intuitively the ability of the classifier to find all the positive samples.</p>
+<p>The best value is 1 and the worst value is 0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>y_true</strong> – 2d array. Ground truth (correct) target values.</li>
+<li><strong>y_pred</strong> – 2d array. Estimated targets as returned by a tagger.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">float.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">score</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seqeval.metrics</span> <span class="kn">import</span> <span class="n">recall_score</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;I-MISC&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s1">&#39;B-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;I-PER&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="go">0.50</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="nlp_architect.utils.metrics.simple_accuracy">
 <code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">simple_accuracy</code><span class="sig-paren">(</span><em>preds</em>, <em>labels</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#simple_accuracy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.simple_accuracy" title="Permalink to this definition">¶</a></dt>
 <dd><p>return simple accuracy</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nlp_architect.utils.metrics.start_of_chunk">
+<code class="descclassname">nlp_architect.utils.metrics.</code><code class="descname">start_of_chunk</code><span class="sig-paren">(</span><em>prev_tag</em>, <em>tag</em>, <em>prev_type</em>, <em>type_</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/metrics.html#start_of_chunk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.metrics.start_of_chunk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a chunk started between the previous and current word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>prev_tag</strong> – previous chunk tag.</li>
+<li><strong>tag</strong> – current chunk tag.</li>
+<li><strong>prev_type</strong> – previous type.</li>
+<li><strong>type</strong> – current type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">boolean.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">chunk_start</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -926,7 +1234,7 @@ for returning.</li>
 <span id="nlp-architect-utils-text-module"></span><h2>nlp_architect.utils.text module<a class="headerlink" href="#module-nlp_architect.utils.text" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="nlp_architect.utils.text.SpacyInstance">
-<em class="property">class </em><code class="descclassname">nlp_architect.utils.text.</code><code class="descname">SpacyInstance</code><span class="sig-paren">(</span><em>model='en'</em>, <em>disable=None</em>, <em>display_prompt=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/text.html#SpacyInstance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.text.SpacyInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.utils.text.</code><code class="descname">SpacyInstance</code><span class="sig-paren">(</span><em>model='en'</em>, <em>disable=None</em>, <em>display_prompt=True</em>, <em>n_jobs=8</em>, <em>batch_size=1500</em>, <em>spacy_doc=False</em>, <em>show_tok=True</em>, <em>show_doc=True</em>, <em>ptb_pos=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/text.html#SpacyInstance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.text.SpacyInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Spacy pipeline wrapper which prompts user for model download authorization.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -938,16 +1246,47 @@ for returning.</li>
 <li><strong>disable</strong> (<em>list of string</em><em>, </em><em>optional</em>) – pipeline annotators to disable
 (default: [])</li>
 <li><strong>display_prompt</strong> (<em>bool</em><em>, </em><em>optional</em>) – flag to display/skip license prompt</li>
+<li><strong>n_jobs</strong> (<em>int</em><em>, </em><em>optional</em>) – maximum number of concurrent Python worker processes.
+If -1 all CPUs are used.</li>
+<li><strong>batch_size</strong> (<em>int</em><em>, </em><em>optional</em>) – number of docs per batch.</li>
+<li><strong>spacy_doc</strong> (<em>bool</em><em>, </em><em>optional</em>) – if True, parser outputs <cite>spacy.tokens.doc</cite>
+instead of <cite>CoreNLPDoc</cite></li>
+<li><strong>show_tok</strong> (<em>bool</em><em>, </em><em>optional</em>) – include token text in <cite>CoreNLPDoc</cite> output</li>
+<li><strong>show_dok</strong> (<em>bool</em><em>, </em><em>optional</em>) – include document text in <cite>CoreNLPDoc</cite> output</li>
+<li><strong>ptb_pos</strong> (<em>bool</em><em>, </em><em>optional</em>) – convert spacy POS tags to Penn Treebank tags</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="nlp_architect.utils.text.SpacyInstance.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>texts</em>, <em>output_dir=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/text.html#SpacyInstance.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.text.SpacyInstance.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a list of documents. If more than 1 document is passed, use multi-processing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>texts</strong> (<em>list of str</em>) – documents to parse</li>
+<li><strong>output_dir</strong> (<em>Path</em><em> or </em><em>str</em><em>, </em><em>optional</em>) – if given, parsed documents will be written here</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="nlp_architect.utils.text.SpacyInstance.parser">
 <code class="descname">parser</code><a class="headerlink" href="#nlp_architect.utils.text.SpacyInstance.parser" title="Permalink to this definition">¶</a></dt>
 <dd><p>return Spacy’s instance parser</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="nlp_architect.utils.text.SpacyInstance.process_batch">
+<code class="descname">process_batch</code><span class="sig-paren">(</span><em>texts</em>, <em>output_dir=None</em>, <em>batch_id=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/utils/text.html#SpacyInstance.process_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.utils.text.SpacyInstance.process_batch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="nlp_architect.utils.text.SpacyInstance.tokenize">
@@ -1271,7 +1610,6 @@ constructed vocabulary</p>
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -1280,10 +1618,16 @@ constructed vocabulary</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -1291,7 +1635,6 @@ constructed vocabulary</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

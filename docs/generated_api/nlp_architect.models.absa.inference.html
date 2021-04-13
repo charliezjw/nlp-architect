@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nlp_architect.models.absa.inference package &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>nlp_architect.models.absa.inference package &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="nlp_architect.models.absa.train package" href="nlp_architect.models.absa.train.html" />
@@ -78,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -159,6 +164,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -193,11 +199,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="nlp_architect_api_index.html"><code class="docutils literal notranslate"><span class="pre">nlp\_architect</span></code> package</a> &raquo;</li>
         
@@ -210,7 +218,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -436,7 +444,7 @@ implement default like this:</p>
 <span id="nlp-architect-models-absa-inference-inference-module"></span><h2>nlp_architect.models.absa.inference.inference module<a class="headerlink" href="#module-nlp_architect.models.absa.inference.inference" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="nlp_architect.models.absa.inference.inference.SentimentInference">
-<em class="property">class </em><code class="descclassname">nlp_architect.models.absa.inference.inference.</code><code class="descname">SentimentInference</code><span class="sig-paren">(</span><em>aspect_lex: Union[str, os.PathLike], opinion_lex: Union[str, os.PathLike, dict], parse: bool = True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/absa/inference/inference.html#SentimentInference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.absa.inference.inference.SentimentInference" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.models.absa.inference.inference.</code><code class="descname">SentimentInference</code><span class="sig-paren">(</span><em>aspect_lex: Union[str, os.PathLike], opinion_lex: Union[str, os.PathLike, dict], parse: bool = True, parser='spacy', spacy_model='en_core_web_sm'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/absa/inference/inference.html#SentimentInference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.absa.inference.inference.SentimentInference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Main class for sentiment inference execution.</p>
 <dl class="attribute">
@@ -480,6 +488,11 @@ implement default like this:</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="nlp_architect.models.absa.inference.inference.SentimentInference.parse_data">
+<code class="descname">parse_data</code><span class="sig-paren">(</span><em>data: os.PathLike, out_dir: Union[str, os.PathLike]</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/absa/inference/inference.html#SentimentInference.parse_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.absa.inference.inference.SentimentInference.parse_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="nlp_architect.models.absa.inference.inference.SentimentInference.run">
 <code class="descname">run</code><span class="sig-paren">(</span><em>doc: str = None</em>, <em>parsed_doc: nlp_architect.common.core_nlp_doc.CoreNLPDoc = None</em><span class="sig-paren">)</span> &#x2192; nlp_architect.models.absa.inference.data_types.SentimentDoc<a class="reference internal" href="../_modules/nlp_architect/models/absa/inference/inference.html#SentimentInference.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.absa.inference.inference.SentimentInference.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run SentimentInference on a single document.</p>
@@ -492,6 +505,11 @@ implement default like this:</p>
 </tbody>
 </table>
 </dd></dl>
+
+<dl class="method">
+<dt id="nlp_architect.models.absa.inference.inference.SentimentInference.run_multiple">
+<code class="descname">run_multiple</code><span class="sig-paren">(</span><em>data: Union[str</em>, <em>os.PathLike] = None</em>, <em>parsed_data: Union[str</em>, <em>os.PathLike] = None</em>, <em>out_dir: Union[str</em>, <em>os.PathLike] = PosixPath('/home/runner/nlp-architect/cache/absa/inference')</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/models/absa/inference/inference.html#SentimentInference.run_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.models.absa.inference.inference.SentimentInference.run_multiple" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -506,7 +524,6 @@ implement default like this:</p>
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -515,10 +532,16 @@ implement default like this:</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -526,7 +549,6 @@ implement default like this:</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

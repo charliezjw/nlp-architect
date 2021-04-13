@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Aspect Based Sentiment Analysis (ABSA) &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>Aspect Based Sentiment Analysis (ABSA) &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -76,6 +80,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -122,6 +127,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -156,18 +162,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Aspect Based Sentiment Analysis (ABSA)</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -215,7 +223,7 @@ The inference approach is based on detecting syntactically related aspect-opinio
 There are two training modes:</p>
 <p><strong>1.</strong> Providing training data in a raw text format. In this case the training flow will
 apply the dependency parser to the data:</p>
-<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">examples</span><span class="o">/</span><span class="n">absa</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">data</span><span class="o">=</span><span class="n">TRAINING_DATASET</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">examples</span><span class="o">/</span><span class="n">absa</span><span class="o">/</span><span class="n">train</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">data</span><span class="o">=</span><span class="n">TRAINING_DATASET</span>
 </pre></div>
 </div>
 <p><strong>Arguments:</strong></p>
@@ -227,13 +235,13 @@ text file per document.</p>
 for the first time this model will be downloaded to <code class="docutils literal notranslate"><span class="pre">~/nlp-architect/cache/absa/train/reranking_model</span></code></p>
 <p><strong>Notes:</strong></p>
 <ul class="simple">
-<li>The generated opinion and aspect lexicons are written as csv files to: <code class="docutils literal notranslate"><span class="pre">~/nlp-architect/cache/absa/train/output/generated_opinion_lex_reranked.csv</span></code> and to <code class="docutils literal notranslate"><span class="pre">~/nlp-architect/cache/absa/train/output/generated_aspect_lex.csv</span></code></li>
+<li>The generated opinion and aspect lexicons are written as csv files to: <code class="docutils literal notranslate"><span class="pre">~/nlp-architect/cache/absa/train/lexicons/generated_opinion_lex_reranked.csv</span></code> and to <code class="docutils literal notranslate"><span class="pre">~/nlp-architect/cache/absa/train/lexicons/generated_aspect_lex.csv</span></code></li>
 <li>In this mode the parsed data (jsons of ParsedDocument objects) is written to: <code class="docutils literal notranslate"><span class="pre">~/nlp-architect/cache/absa/train/parsed</span></code></li>
 <li>When running the training for the first time the system will download glove word embbedding model (the user will be prompted for authorization) to: <code class="docutils literal notranslate"><span class="pre">~/nlp-architect/cache/absa/train/word_emb_unzipped</span></code> (this may take a while)</li>
 <li>For demonstration purposes we provide a sample of tripadvisor.co.uk restaurants reviews under the <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share-Alike 3.0 License</a> (Copyright 2018 Wikimedia Foundation). The dataset can be found at: <code class="docutils literal notranslate"><span class="pre">datasets/absa/datasets/absa/tripadvisor_co_uk-travel_restaurant_reviews_sample_2000_train.csv</span></code>.</li>
 </ul>
 <p><strong>2.</strong> Providing parsed training data. In this case the training flow skips the parsing step:</p>
-<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">examples</span><span class="o">/</span><span class="n">absa</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">parsed</span><span class="o">-</span><span class="n">data</span><span class="o">=</span><span class="n">PARSED_TRAINING_DATASET</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">examples</span><span class="o">/</span><span class="n">absa</span><span class="o">/</span><span class="n">train</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">parsed</span><span class="o">-</span><span class="n">data</span><span class="o">=</span><span class="n">PARSED_TRAINING_DATASET</span>
 </pre></div>
 </div>
 <p><strong>Arguments:</strong></p>
@@ -299,7 +307,6 @@ together. Simply copy all alias names to the same line in the csv file.</p>
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -308,10 +315,16 @@ together. Simply copy all alias names to the same line in the csv file.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -319,7 +332,6 @@ together. Simply copy all alias names to the same line in the csv file.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

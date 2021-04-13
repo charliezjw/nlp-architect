@@ -1,23 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Named Entity Recognition &mdash; NLP Architect by Intel® AI Lab 0.5.2 documentation</title>
+  <title>Named Entity Recognition &mdash; NLP Architect by Intel® AI Lab 0.5.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
+
+  
   
 
   
   
-  
+
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,13 +42,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/nlp_arch_theme.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,900" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -76,6 +80,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -122,6 +127,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -156,18 +162,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Named Entity Recognition</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -285,7 +293,7 @@ This model is a fast alternative to LSTM-based models with ~10x speedup compared
 <p>See <code class="docutils literal notranslate"><span class="pre">`nlp-inference</span> <span class="pre">tagger</span> <span class="pre">-h`</span></code> for full list of options for running a trained model.</p>
 <dl class="class">
 <dt id="nlp_architect.nn.torch.modules.embedders.IDCNN">
-<em class="property">class </em><code class="descclassname">nlp_architect.nn.torch.modules.embedders.</code><code class="descname">IDCNN</code><span class="sig-paren">(</span><em>word_vocab_size: int</em>, <em>num_labels: int</em>, <em>word_embedding_dims: int = 100</em>, <em>char_embedding_dims: int = 16</em>, <em>char_cnn_filters: int = 128</em>, <em>char_cnn_kernel_size: int = 3</em>, <em>cnn_kernel_size: int = 3</em>, <em>cnn_num_filters: int = 128</em>, <em>input_dropout: float = 0.5</em>, <em>word_dropout: float = 0.5</em>, <em>hidden_dropout: float = 0.5</em>, <em>blocks: int = 1</em>, <em>dilations: List[T] = None</em>, <em>padding_idx: int = 0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/nn/torch/modules/embedders.html#IDCNN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.nn.torch.modules.embedders.IDCNN" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">nlp_architect.nn.torch.modules.embedders.</code><code class="descname">IDCNN</code><span class="sig-paren">(</span><em>word_vocab_size: int</em>, <em>num_labels: int</em>, <em>word_embedding_dims: int = 100</em>, <em>shape_vocab_size: int = 4</em>, <em>shape_embedding_dims: int = 5</em>, <em>char_embedding_dims: int = 16</em>, <em>char_cnn_filters: int = 128</em>, <em>char_cnn_kernel_size: int = 3</em>, <em>cnn_kernel_size: int = 3</em>, <em>cnn_num_filters: int = 128</em>, <em>input_dropout: float = 0.35</em>, <em>middle_dropout: float = 0</em>, <em>hidden_dropout: float = 0.15</em>, <em>blocks: int = 1</em>, <em>dilations: List = None</em>, <em>embedding_pad_idx: int = 0</em>, <em>use_chars: bool = False</em>, <em>drop_penalty: float = 0.0001</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nlp_architect/nn/torch/modules/embedders.html#IDCNN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nlp_architect.nn.torch.modules.embedders.IDCNN" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID-CNN (iterated dilated) tagging model (based on Strubell et al 2017) with word character
 embedding (using CNN feature extractors)</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -296,17 +304,21 @@ embedding (using CNN feature extractors)</p>
 <li><strong>word_vocab_size</strong> (<em>int</em>) – word vocabulary size</li>
 <li><strong>num_labels</strong> (<em>int</em>) – number of labels (classifier)</li>
 <li><strong>word_embedding_dims</strong> (<em>int</em><em>, </em><em>optional</em>) – word embedding dims</li>
+<li><strong>shape_vocab_size</strong> (<em>int</em><em>, </em><em>optional</em>) – shape vocabulary size</li>
+<li><strong>shape_embedding_dims</strong> (<em>int</em><em>, </em><em>optional</em>) – shape embedding dims</li>
 <li><strong>char_embedding_dims</strong> (<em>int</em><em>, </em><em>optional</em>) – character embedding dims</li>
 <li><strong>char_cnn_filters</strong> (<em>int</em><em>, </em><em>optional</em>) – character CNN kernel size</li>
 <li><strong>char_cnn_kernel_size</strong> (<em>int</em><em>, </em><em>optional</em>) – character CNN number of filters</li>
 <li><strong>cnn_kernel_size</strong> (<em>int</em><em>, </em><em>optional</em>) – CNN embedder kernel size</li>
 <li><strong>cnn_num_filters</strong> (<em>int</em><em>, </em><em>optional</em>) – CNN embedder number of filters</li>
-<li><strong>input_dropout</strong> (<em>float</em><em>, </em><em>optional</em>) – input dropout rate</li>
-<li><strong>word_dropout</strong> (<em>float</em><em>, </em><em>optional</em>) – pre embedder dropout rate</li>
-<li><strong>hidden_dropout</strong> (<em>float</em><em>, </em><em>optional</em>) – pre classifier dropout rate</li>
+<li><strong>input_dropout</strong> (<em>float</em><em>, </em><em>optional</em>) – input layer (embedding) dropout rate</li>
+<li><strong>middle_dropout</strong> (<em>float</em><em>, </em><em>optional</em>) – middle layer dropout rate</li>
+<li><strong>hidden_dropout</strong> (<em>float</em><em>, </em><em>optional</em>) – hidden layer dropout rate</li>
 <li><strong>blocks</strong> (<em>int</em><em>, </em><em>optinal</em>) – number of blocks</li>
 <li><strong>dilations</strong> (<em>List</em><em>, </em><em>optinal</em>) – List of dilations per CNN layer</li>
-<li><strong>padding_idx</strong> (<em>int</em><em>, </em><em>optinal</em>) – padding number for embedding layers</li>
+<li><strong>embedding_pad_idx</strong> (<em>int</em><em>, </em><em>optional</em>) – padding number for embedding layers</li>
+<li><strong>use_chars</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to use char embedding, defaults to False</li>
+<li><strong>drop_penalty</strong> (<em>float</em><em>, </em><em>optional</em>) – penalty for dropout regularization</li>
 </ul>
 </td>
 </tr>
@@ -349,7 +361,6 @@ Currently we support BERT/XLNet and quantized BERT base models which utilize a f
            
           </div>
           <footer>
-  
 
   <hr/>
 
@@ -358,10 +369,16 @@ Currently we support BERT/XLNet and quantized BERT base models which utilize a f
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -369,7 +386,6 @@ Currently we support BERT/XLNet and quantized BERT base models which utilize a f
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
